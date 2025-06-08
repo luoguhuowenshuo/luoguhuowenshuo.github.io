@@ -1,143 +1,177 @@
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>洛谷 - 编程学习与竞赛平台</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* 自定义样式模仿洛谷 */
-        .nav-bg {
-            background: linear-gradient(to right, #3b82f6, #60a5fa);
-        }
-        .problem-difficulty-easy { color: #22c55e; }
-        .problem-difficulty-medium { color: #eab308; }
-        .problem-difficulty-hard { color: #ef4444; }
-        .btn-gradient {
-            background: linear-gradient(to right, #3b82f6, #8b5cf6);
-            transition: all 0.3s ease;
-        }
-        .btn-gradient:hover {
-            background: linear-gradient(to right, #2563eb, #7c3aed);
-            transform: scale(1.05);
-        }
-        .card-shadow {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>GitHub-Inspired Homepage</title>
+   <style>
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+
+       body {
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+           background-color: #0d1117;
+           color: #c9d1d9;
+           line-height: 1.5;
+       }
+
+       header {
+           background-color: #161b22;
+           border-bottom: 1px solid #30363d;
+           padding: 16px 32px;
+       }
+
+       nav {
+           max-width: 1280px;
+           margin: 0 auto;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+       }
+
+       .logo {
+           font-size: 24px;
+           font-weight: 600;
+           color: #f0f6fc;
+           text-decoration: none;
+       }
+
+       .nav-links a {
+           color: #c9d1d9;
+           text-decoration: none;
+           margin-left: 24px;
+           font-size: 14px;
+       }
+
+       .nav-links a:hover {
+           color: #ffffff;
+       }
+
+       .hero {
+           background: linear-gradient(180deg, #0d1117, #1c2526);
+           padding: 80px 32px;
+           text-align: center;
+       }
+
+       .hero h1 {
+           font-size: 48px;
+           font-weight: 600;
+           color: #ffffff;
+           margin-bottom: 24px;
+       }
+
+       .hero p {
+           font-size: 20px;
+           color: #8b949e;
+           max-width: 600px;
+           margin: 0 auto 32px;
+       }
+
+       .cta-button {
+           display: inline-block;
+           padding: 12px 24px;
+           background-color: #238636;
+           color: #ffffff;
+           text-decoration: none;
+           border-radius: 6px;
+           font-weight: 500;
+           font-size: 16px;
+           transition: background-color 0.2s ease;
+       }
+
+       .cta-button:hover {
+           background-color: #2ea043;
+       }
+
+       .features {
+           max-width: 1280px;
+           margin: 64px auto;
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           gap: 32px;
+           padding: 0 32px;
+       }
+
+       .feature-card {
+           background-color: #161b22;
+           border: 1px solid #30363d;
+           border-radius: 6px;
+           padding: 24px;
+       }
+
+       .feature-card h3 {
+           font-size: 20px;
+           color: #ffffff;
+           margin-bottom: 12px;
+       }
+
+       .feature-card p {
+           font-size: 14px;
+           color: #8b949e;
+       }
+
+       footer {
+           background-color: #161b22;
+           border-top: 1px solid #30363d;
+           padding: 32px;
+           text-align: center;
+           font-size: 12px;
+           color: #8b949e;
+       }
+
+       footer a {
+           color: #c9d1d9;
+           text-decoration: none;
+       }
+
+       footer a:hover {
+           text-decoration: underline;
+       }
+   </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <!-- 导航栏 -->
-    <nav class="nav-bg text-white p-4 sticky top-0 z-10">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">洛谷</div>
-            <div class="space-x-6">
-                <a href="#" class="hover:text-gray-200">首页</a>
-                <a href="#" class="hover:text-gray-200">题目</a>
-                <a href="#" class="hover:text-gray-200">比赛</a>
-                <a href="#" class="hover:text-gray-200">讨论</a>
-                <a href="#" class="hover:text-gray-200">排行榜</a>
-                <a href="#" class="hover:text-gray-200">登录</a>
-            </div>
-        </div>
-    </nav>
+<body>
+   <header>
+       <nav>
+           <a href="#" class="logo">CodeHub</a>
+           <div class="nav-links">
+               <a href="#">Product</a>
+               <a href="#">Solutions</a>
+               <a href="#">Open Source</a>
+               <a href="#">Pricing</a>
+               <a href="#">Sign in</a>
+               <a href="#" class="cta-button">Sign up</a>
+           </div>
+       </nav>
+   </header>
 
-    <!-- 主内容 -->
-    <div class="container mx-auto mt-6 flex space-x-6">
-        <!-- 侧边栏 -->
-        <aside class="w-1/4 bg-white p-6 rounded-lg card-shadow">
-            <h2 class="text-lg font-bold mb-4">快速导航</h2>
-            <ul class="space-y-2">
-                <li><a href="#" class="text-blue-600 hover:underline">我的主页</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">提交记录</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">我的比赛</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">题单管理</a></li>
-            </ul>
-            <h2 class="text-lg font-bold mt-6 mb-4">公告</h2>
-            <p class="text-gray-600">2025-06-08：洛谷新版上线，欢迎体验！</p>
-        </aside>
+   <section class="hero">
+       <h1>Where the world builds software</h1>
+       <p>Millions of developers and companies build, ship, and maintain their software on CodeHub — the largest and most advanced development platform in the world.</p>
+       <a href="#" class="cta-button">Start for free</a>
+   </section>
 
-        <!-- 主内容区域 -->
-        <main class="w-3/4">
-            <!-- 题目列表 -->
-            <section class="bg-white p-6 rounded-lg mb-6 card-shadow">
-                <h2 class="text-xl font-bold mb-4">推荐题目</h2>
-                <table class="w-full text-left">
-                    <thead>
-                        <tr class="border-b">
-                            <th class="py-2">ID</th>
-                            <th class="py-2">标题</th>
-                            <th class="py-2">难度</th>
-                            <th class="py-2">通过率</th>
-                        </tr>
-                    </thead>
-                    <tbody id="problem-list">
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-2">P1000</td>
-                            <td><a href="#" class="text-blue-600 hover:underline">A+B Problem</a></td>
-                            <td class="problem-difficulty-easy">入门</td>
-                            <td>80%</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-2">P1001</td>
-                            <td><a href="#" class="text-blue-600 hover:underline">GCD and LCM</a></td>
-                            <td class="problem-difficulty-medium">普及</td>
-                            <td>65%</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-2">P1002</td>
-                            <td><a href="#" class="text-blue-600 hover:underline">Dynamic Programming</a></td>
-                            <td class="problem-difficulty-hard">提高</td>
-                            <td>45%</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="btn-gradient text-white px-4 py-2 rounded-lg mt-4">加载更多</button>
-            </section>
+   <section class="features">
+       <div class="feature-card">
+           <h3>Code Collaboration</h3>
+           <p>Work together on projects with powerful version control and code review tools.</p>
+       </div>
+       <div class="feature-card">
+           <h3>CI/CD & Automation</h3>
+           <p>Automate your workflows with seamless CI/CD integration and GitHub Actions.</p>
+       </div>
+       <div class="feature-card">
+           <h3>Security</h3>
+           <p>Find and fix vulnerabilities with advanced security scanning and Dependabot.</p>
+       </div>
+   </section>
 
-            <!-- 排行榜 -->
-            <section class="bg-white p-6 rounded-lg card-shadow">
-                <h2 class="text-xl font-bold mb-4">排行榜</h2>
-                <ul class="space-y-2">
-                    <li class="flex justify-between">
-                        <span class="text-blue-600">1. kkksc03</span>
-                        <span>积分: 1250</span>
-                    </li>
-                    <li class="flex justify-between">
-                        <span class="text-blue-600">2. _luogu_huowenshuo_</span>
-                        <span>积分: 1100</span>
-                    </li>
-                    <li class="flex justify-between">
-                        <span class="text-blue-600">3. coder123</span>
-                        <span>积分: 900</span>
-                    </li>
-                </ul>
-            </section>
-        </main>
-    </div>
-
-    <!-- 底部 -->
-    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
-        <p>&copy; 2025 洛谷. All rights reserved.</p>
-        <p><a href="#" class="text-blue-300 hover:underline">关于我们</a> | <a href="#" class="text-blue-300 hover:underline">联系我们</a></p>
-    </footer>
-
-    <script>
-        // 动态设置题目难度颜色（模仿洛谷）
-        document.addEventListener('DOMContentLoaded', () => {
-            const difficulties = document.querySelectorAll('#problem-list td:nth-child(3)');
-            difficulties.forEach(cell => {
-                if (cell.textContent === '入门') {
-                    cell.classList.add('problem-difficulty-easy');
-                } else if (cell.textContent === '普及') {
-                    cell.classList.add('problem-difficulty-medium');
-                } else if (cell.textContent === '提高') {
-                    cell.classList.add('problem-difficulty-hard');
-                }
-            });
-        });
-    </script>
+   <footer>
+       <p>&copy; 2025 CodeHub. <a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Docs</a></p>
+   </footer>
 </body>
 </html>
 
